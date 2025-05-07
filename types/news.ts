@@ -3,6 +3,6 @@ export type NewsItem = {
   slug: string
   title: string
   image: string
-  date: string
+  date: Date
   content: string
 }
