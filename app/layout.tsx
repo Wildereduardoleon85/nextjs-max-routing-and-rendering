@@ -1,4 +1,3 @@
-import { MainHeader } from '@/components'
 import './globals.css'
 import { Merriweather } from 'next/font/google'
 
@@ -13,19 +12,12 @@ export const metadata = {
   description: 'Learn how to route to different pages.',
 }
 
-type RootLayoutProps = {
-  children: React.ReactNode
-}
-
-export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
+function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={merriweather.className}>
-      <body>
-        <div id="page">
-          <MainHeader />
-          {children}
-        </div>
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
+
+export default RootLayout
